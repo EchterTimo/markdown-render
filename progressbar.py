@@ -24,7 +24,7 @@ class ProgressBarStyle(Enum):
 
 @dataclass
 class ProgressBar:
-    value: int = 50
+    _value: int = 50
     '''
     The current value of the progress bar.
     Should be in range from 0 to scale.
@@ -119,7 +119,7 @@ class ProgressBar:
         that differ from the default values.
         """
 
-        url = BASE_URL.format(self.value)
+        url = BASE_URL.format(self._value)
         params = self.get_modified_keys()
 
         r = Request(
@@ -143,6 +143,7 @@ if __name__ == '__main__':
         title='Test Progress',
         width=200,
         style=ProgressBarStyle.FOR_THE_BADGE,
-        show_text=False
+        show_text=False,
+        _value=75,
     )
     print(pb.generate_url())

@@ -34,8 +34,8 @@ template = env.get_template('1.md')
 data = {
     'h1': 'Template 1',
     'h2_1': 'Skills',
-    'pbn': lambda lang, value: ProgressBar(value=value, title=lang, width=200, show_text=False, _title_auto_fill_length=11).generate_url(),
-    'pb': lambda value: ProgressBar(value=value, width=200, show_text=False).generate_url(),
+    'pbn': lambda lang, value: ProgressBar(_value=value, title=lang, width=200, show_text=False, _title_auto_fill_length=11).generate_url(),
+    'pb': lambda value: ProgressBar(_value=value, width=200, show_text=False).generate_url(),
     'image': lambda path: f'<img src="{path.replace("<", "").replace(">", "")}" alt="" style="vertical-align: middle; width: 40px; height: 40px;">',
 }
 
