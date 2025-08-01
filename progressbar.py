@@ -98,6 +98,8 @@ class ProgressBar:
         modified_keys: dict = {}
         for key, value in DEFAULT_PROGRESS_BAR.__dict__.items():
             if getattr(self, key) != value:
+                if key.startswith('_'):
+                    continue
                 modified_keys[key] = getattr(self, key)
         return modified_keys
 
@@ -136,6 +138,7 @@ Default progress bar with standard settings.
 BASE_URL = 'https://progress-bar.xyz/{}/'
 
 if __name__ == '__main__':
+    # example usage
     pb = ProgressBar(
         title='Test Progress',
         width=200,
