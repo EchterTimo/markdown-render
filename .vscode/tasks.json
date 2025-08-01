@@ -1,0 +1,26 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "build",
+      "icon": {
+        "light": "images/render-light.svg",
+        "dark": "images/render-dark.svg"
+      },
+      "type": "shell",
+      "windows": {
+        "command": "python",
+        "args": ["render.py"]
+      },
+      "linux": {
+        "command": "python3",
+        "args": ["render.py"]
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    }
+  ]
+}
