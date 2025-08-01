@@ -4,19 +4,19 @@ Demo for rendering Markdown templates with progress bars and dynamic content.
 
 ## Get started
 
-- Install the required dependencies
+1. Install the required dependencies
 
-```bash
-pip install -r requirements.txt
-```
+    ```bash
+    pip install -r requirements.txt
+    ```
 
-- Run the render script
+2. Run the render script
 
-```bash
-python render.py
-```
+    ```bash
+    python render.py
+    ```
 
-- Open the generated file in the `dist` folder to see the rendered Markdown with progress bars.
+3. Open the generated file in the `dist` folder to see the rendered Markdown with progress bars.
 
 ## Used open-source tools
 
