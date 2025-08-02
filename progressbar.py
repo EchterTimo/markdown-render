@@ -86,7 +86,7 @@ class ProgressBar:
     Default: 0
     '''
 
-    style: ProgressBarStyle = ProgressBarStyle.DEFAULT
+    style: ProgressBarStyle | str = ProgressBarStyle.DEFAULT
 
     def get_modified_keys(self):
         '''
@@ -94,6 +94,8 @@ class ProgressBar:
         '''
         if self.title is not None and self._title_auto_fill_length > 0:
             self._fill_spaces_title(self._title_auto_fill_length)
+
+        self.style = str(self.style)
 
         modified_keys: dict = {}
         for key, value in DEFAULT_PROGRESS_BAR.__dict__.items():
